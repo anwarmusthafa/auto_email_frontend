@@ -1,15 +1,17 @@
 import React, { useState } from 'react'; 
 import { useNavigate } from 'react-router-dom'; 
-import { useSelector } from 'react-redux'; 
+import { useSelector , useDispatch } from 'react-redux'; 
 import { axiosInstance } from '../services/axiosSetUp'; 
-import { setUserId } from '../redux/slices/profileSlice';  
+import { clearUserId } from '../redux/slices/profileSlice';  
 import './OTPVerification.css'; 
+import {message} from 'antd'
 
 const OTPVerification = () => { 
   const [otp, setOtp] = useState(['', '', '', '', '', '']); 
   const [loading, setLoading] = useState(false); 
   const [error, setError] = useState(null); 
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
+  const dispatch = useDispatch() 
 
   const userId = useSelector((state) => state.profile.userId);// Get userId (uuid) from Redux store 
 
@@ -49,13 +51,17 @@ const OTPVerification = () => {
       }); 
 
       if (response.status === 200) { 
-        console.log(response.data); 
-        navigate('/login'); // Navigate to login or next step after successful verification 
+        dispatch(clearUserId()); 
+        localStorage.removeItem('persist:root');
+        message.success("Otp is Verified, Please Login Now")
+        navigate('/login');
       } 
     } catch (error) { 
       if (error.response?.data?.error) { 
         setError(error.response.data.error); 
       } else { 
+        console.log("error",error);
+        
         setError('Verification failed. Please try again.'); 
       } 
     } finally { 

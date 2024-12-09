@@ -75,7 +75,6 @@ const SignUp = () => {
       });
 
       if (response.status === 201) {
-        console.log(response.data);
         dispatch(setUserId(response.data.user_id)); // Store user_id in Redux state
         navigate('/otp-verification');
       }

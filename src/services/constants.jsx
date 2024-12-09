@@ -7,4 +7,4 @@ export const ADMIN_ACCESS_TOKEN = 'admin_access_token';
 export const ADMIN_REFRESH_TOKEN = 'admin_refresh_token';
 
 //BaseUrl
-export const BASE_URL = 'http://127.0.0.1:8000';
+export const BASE_URL = 'https://echobyte.shop';

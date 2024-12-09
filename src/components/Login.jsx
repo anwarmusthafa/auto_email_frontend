@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { axiosInstance } from '../services/axiosSetUp';
+import { USER_ACCESS_TOKEN, USER_REFRESH_TOKEN } from '../services/constants';
 import './Login.css';
 
 const Login = () => {
@@ -24,9 +25,9 @@ const Login = () => {
       });
 
       if (response.status === 200) {
-        localStorage.setItem('accessToken', response.data.access);
-        localStorage.setItem('refreshToken', response.data.refresh);
-        navigate('/dashboard');
+        localStorage.setItem(USER_ACCESS_TOKEN, response.data.access);
+        localStorage.setItem(USER_REFRESH_TOKEN, response.data.refresh);
+        navigate('/home');
       }
     } catch (err) {
       if (err.response?.data?.error) {

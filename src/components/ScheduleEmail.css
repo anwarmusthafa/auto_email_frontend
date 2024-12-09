@@ -1,0 +1,127 @@
+.schedule-email-wrapper {
+    max-width: 100%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #16213E;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .schedule-email-wrapper h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #4A6CF7;
+    font-size: 24px;
+    font-weight: 700;
+    width: 600px;
+  }
+  
+  .schedule-email-error {
+    background-color: #FF4D4D;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .schedule-email-success {
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .schedule-email-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .schedule-email-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .schedule-email-field label {
+    color: #B5B5BE;
+    font-weight: 500;
+  }
+  
+  .schedule-email-field input,
+  .schedule-email-field textarea {
+    background-color: #0F3460;
+    border: 1px solid #4A6CF7;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+  }
+  
+  .schedule-email-field input:focus,
+  .schedule-email-field textarea:focus {
+    outline: none;
+    border-color: #4A6CF7;
+    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.2);
+  }
+  
+  .schedule-email-field textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  .schedule-email-submit-btn {
+    background-color: #4A6CF7;
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .schedule-email-submit-btn:hover {
+    background-color: #3A5AD6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(74, 108, 247, 0.3);
+  }
+  
+  .schedule-email-submit-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .schedule-email-wrapper {
+      width: 90%;
+      margin: 20px auto;
+      padding: 20px;
+    }
+  
+    .schedule-email-wrapper h2 {
+      font-size: 20px;
+    }
+  
+    .schedule-email-field input,
+    .schedule-email-field textarea {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .schedule-email-submit-btn {
+      font-size: 16px;
+      padding: 12px;
+    }
+  }

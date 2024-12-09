@@ -1,0 +1,137 @@
+.auth-home-wrapper {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .auth-home-header {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .auth-home-header-content {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .auth-home-user-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .auth-home-user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .auth-home-username {
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  
+  .auth-home-user-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .auth-home-profile-btn,
+  .auth-home-logout-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .auth-home-profile-btn:hover,
+  .auth-home-logout-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .auth-home-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .auth-home-content {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1);
+    max-width: 1000px;
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .auth-home-welcome h1 {
+    color: #4a6cf7;
+    margin-bottom: 10px;
+  }
+  
+  .auth-home-welcome p {
+    color: #6a75ff;
+    margin-bottom: 30px;
+  }
+  
+  .auth-home-features-container {
+    margin-bottom: 30px;
+  }
+  
+  .auth-home-features {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .auth-home-feature {
+    flex: 1;
+    background: #f4f7ff;
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+  
+  .auth-home-feature:hover {
+    transform: translateY(-10px);
+  }
+  
+  .auth-home-feature-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .auth-home-cta-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .auth-home-schedule-btn {
+    background: #4a6cf7;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .auth-home-schedule-btn:hover {
+    background: #6a75ff;
+    transform: translateY(-5px);
+  }
+  
+  .auth-home-schedule-btn:active {
+    transform: translateY(0);
+  }
