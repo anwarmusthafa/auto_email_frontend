@@ -1,0 +1,80 @@
+.otp-verification-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1e1e2f; /* Dark background for the container */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: white;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .otp-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .gop-auth-otp-inputs { 
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 16px; 
+  }
+  
+  .gop-auth-input { 
+    width: 50px; /* Set a fixed width for OTP input */ 
+    padding: 14px; 
+    border: 2px solid #2c3e50; 
+    border-radius: 8px; 
+    font-size: 24px; /* Increase font size for better visibility */ 
+    text-align: center; /* Center text in the input */ 
+    transition: all 0.3s ease; 
+    background-color: #16213e; 
+    color: white; 
+    caret-color: white; 
+  }
+  
+  .gop-auth-input:focus { 
+    border-color: #4a6cf7; /* Change border color on focus */
+    outline: none; 
+    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.1); 
+  }
+  
+  .gop-auth-input-error { 
+    border-color: #e74c3c !important; /* Red border for error state */
+  }
+  
+  .error-message {
+    color: #e74c3c; /* Red color for error messages */
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    background-color: #4a6cf7; /* Button background color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:disabled {
+    background-color: #7a9bdc; /* Lighter color when disabled */
+    cursor: not-allowed;
+  }
+  
+  .submit-button:hover:not(:disabled) {
+    background-color: #3b5bbf; /* Darker shade on hover */
+  }

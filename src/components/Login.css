@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  --auth-primary-color: #4a6cf7;
+  --auth-secondary-color: #6a75ff;
+  --auth-text-color: #333;
+  --auth-error-color: #ff4d4d;
+  --auth-background-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.auth-login-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.auth-login-container {
+  background-color: #1a1a2e;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+  max-width: 480px;
+  width: 100%;
+  padding: 40px;
+  transition: all 0.3s ease;
+}
+
+.auth-login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-login-header h1 {
+  color: var(--auth-primary-color);
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.auth-login-header p {
+  color: #a0aec0;
+  font-size: 16px;
+}
+
+.auth-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-form-group {
+  position: relative;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #2c3e50;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: #16213e;
+  color: white;
+  caret-color: white;
+}
+
+.auth-input::placeholder {
+  color: #a0aec0;
+}
+
+.auth-input:focus {
+  border-color: var(--auth-primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.1);
+}
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.show-password-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-input-error {
+  border-color: var(--auth-error-color) !important;
+}
+
+.auth-error-text {
+  color: var(--auth-error-color);
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+  animation: auth-shake 0.4s linear;
+}
+
+.auth-global-error {
+  background-color: rgba(255, 77, 77, 0.1);
+  color: var(--auth-error-color);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.auth-login-button {
+  background: var(--auth-primary-color);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.auth-login-button:hover:not(:disabled) {
+  background: var(--auth-secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(74, 108, 247, 0.3);
+}
+
+.auth-login-button:disabled {
+  background: #a0aec0;
+  cursor: not-allowed;
+}
+
+.auth-login-extras {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.auth-forgot-password {
+  color: var(--auth-primary-color);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.auth-forgot-password:hover {
+  color: var(--auth-secondary-color);
+  text-decoration: underline;
+}
+
+.auth-signup-prompt {
+  text-align: center;
+  margin-top: 20px;
+  color: #a0aec0;
+}
+
+.auth-signup-link {
+  color: var(--auth-primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 5px;
+  transition: color 0.3s ease;
+}
+
+.auth-signup-link:hover {
+  color: var(--auth-secondary-color);
+  text-decoration: underline;
+}
+
+@keyframes auth-shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 90% { transform: translateX(-1px); }
+  20%, 80% { transform: translateX(1px); }
+  30%, 50%, 70% { transform: translateX(-1px); }
+  40%, 60% { transform: translateX(1px); }
+}
+
+@media (max-width: 600px) {
+  .auth-login-container {
+    padding: 20px;
+    margin: 0 10px;
+  }
+}
